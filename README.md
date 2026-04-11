@@ -5,13 +5,13 @@ A simple, clean SQLite database wrapper for Python. No dependencies. No complexi
 ## Installation
 
 ```bash
-pip install sqliter
+pip install sqliter-lochan
 ```
 
 ## Quick Start
 
 ```python
-from sqliter import Database
+from sqliter-lochan import Database
 
 db = Database("myapp.db")
 
@@ -42,7 +42,7 @@ for u in users:
 ## Error Handling
 
 ```python
-from sqliter import Database, DatabaseError
+from sqliter-lochan import Database, DatabaseError
 
 db = Database("myapp.db")
 
@@ -52,7 +52,7 @@ except DatabaseError as e:
     print(f"Something went wrong: {e}")
 ```
 
-## Why sqliter?
+## Why sqliter-lochan?
 
 - Zero dependencies — only uses Python's built-in `sqlite3`
 - One method for all operations — simple and predictable
