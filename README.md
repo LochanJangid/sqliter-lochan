@@ -5,13 +5,13 @@ A simple, clean SQLite database wrapper for Python. No dependencies. No complexi
 ## Installation
 
 ```bash
-pip install sqliter-lochan
+pip install sqliter
 ```
 
 ## Quick Start
 
 ```python
-from sqliter-lochan import Database
+from sqliter import Database
 
 db = Database("myapp.db")
 
@@ -19,11 +19,11 @@ db = Database("myapp.db")
 db.query("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)")
 
 # Insert
-db.query("INSERT INTO users (name, age) VALUES (?, ?)", ("Rahul", 21))
+db.query("INSERT INTO users (name, age) VALUES (?, ?)", ("Elone", 21))
 
 # Fetch one
-user = db.query("SELECT * FROM users WHERE name = ?", ("Rahul",), operation="fetchone")
-print(dict(user))  # {'id': 1, 'name': 'Rahul', 'age': 21}
+user = db.query("SELECT * FROM users WHERE name = ?", ("Elone",), operation="fetchone")
+print(dict(user))  # {'id': 1, 'name': 'Elone', 'age': 21}
 
 # Fetch all
 users = db.query("SELECT * FROM users", operation="fetchall")
@@ -42,12 +42,12 @@ for u in users:
 ## Error Handling
 
 ```python
-from sqliter-lochan import Database, DatabaseError
+from sqliter import Database, DatabaseError
 
 db = Database("myapp.db")
 
 try:
-    db.query("INSERT INTO users (name) VALUES (?)", ("Rahul",))
+    db.query("INSERT INTO users (name) VALUES (?)", ("Elone",))
 except DatabaseError as e:
     print(f"Something went wrong: {e}")
 ```

@@ -1,8 +1,8 @@
 Metadata-Version: 2.4
 Name: sqliter-lochan
-Version: 0.1.0
+Version: 0.1.2
 Summary: A simple, clean SQLite database wrapper for Python
-Home-page: https://github.com/yourusername/sqliter
+Home-page: https://github.com/LochanJangid/sqliter-lochan
 Author: Lochan Jangid
 Author-email: lochanjangidcoder@gmail.com
 Classifier: Programming Language :: Python :: 3
@@ -39,11 +39,11 @@ db = Database("myapp.db")
 db.query("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)")
 
 # Insert
-db.query("INSERT INTO users (name, age) VALUES (?, ?)", ("Rahul", 21))
+db.query("INSERT INTO users (name, age) VALUES (?, ?)", ("Elone", 21))
 
 # Fetch one
-user = db.query("SELECT * FROM users WHERE name = ?", ("Rahul",), operation="fetchone")
-print(dict(user))  # {'id': 1, 'name': 'Rahul', 'age': 21}
+user = db.query("SELECT * FROM users WHERE name = ?", ("Elone",), operation="fetchone")
+print(dict(user))  # {'id': 1, 'name': 'Elone', 'age': 21}
 
 # Fetch all
 users = db.query("SELECT * FROM users", operation="fetchall")
@@ -67,12 +67,12 @@ from sqliter import Database, DatabaseError
 db = Database("myapp.db")
 
 try:
-    db.query("INSERT INTO users (name) VALUES (?)", ("Rahul",))
+    db.query("INSERT INTO users (name) VALUES (?)", ("Elone",))
 except DatabaseError as e:
     print(f"Something went wrong: {e}")
 ```
 
-## Why sqliter?
+## Why sqliter-lochan?
 
 - Zero dependencies — only uses Python's built-in `sqlite3`
 - One method for all operations — simple and predictable

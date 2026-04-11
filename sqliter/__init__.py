@@ -1,5 +1,5 @@
 from .database import Database, DatabaseError
 
-__version__ = "0.1.0"
-__author__ = "Your Name"
+__version__ = "0.1.2"
+__author__ = "Lochan Jangid"
 __all__ = ["Database", "DatabaseError"]
