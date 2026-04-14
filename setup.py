@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="sqliter-lochan",
-    version="0.1.2",
+    version="0.1.3",
     author="Lochan Jangid",
     author_email="lochanjangidcoder@gmail.com",
     description="A simple, clean SQLite database wrapper for Python",
